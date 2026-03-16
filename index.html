@@ -1,45 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Anany Sharma | Game Developer</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial;
-background:#0f172a;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:linear-gradient(135deg,#020617,#0f172a,#020617);
 color:white;
 }
 
 header{
-padding:40px;
+padding:30px;
 text-align:center;
-background:#020617;
-}
-
-h1{
-font-size:48px;
 }
 
 nav{
-text-align:center;
-padding:15px;
-background:#020617;
+margin-top:10px;
 }
 
 nav a{
-color:white;
-margin:15px;
+color:#94a3b8;
+margin:0 15px;
 text-decoration:none;
-font-size:18px;
+font-weight:500;
+transition:0.3s;
 }
 
-section{
-padding:60px;
-max-width:1100px;
-margin:auto;
+nav a:hover{
+color:#38bdf8;
 }
 
 .hero{
@@ -48,28 +49,59 @@ padding:120px 20px;
 }
 
 .hero h1{
-font-size:60px;
+font-size:48px;
+margin-bottom:10px;
 }
 
 .hero p{
-font-size:22px;
 color:#94a3b8;
+font-size:18px;
 }
 
 .btn{
-background:#3b82f6;
-padding:12px 24px;
-border-radius:8px;
-color:white;
+display:inline-block;
+margin-top:20px;
+padding:12px 28px;
+background:linear-gradient(45deg,#3b82f6,#06b6d4);
+border-radius:30px;
 text-decoration:none;
+color:white;
+transition:0.3s;
 }
 
-.skills span{
-display:inline-block;
-background:#1e293b;
-padding:10px 18px;
-margin:10px;
-border-radius:8px;
+.btn:hover{
+transform:scale(1.1);
+}
+
+section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
+}
+
+h2{
+margin-bottom:30px;
+font-size:32px;
+text-align:center;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.card{
+background:#020617;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #1e293b;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#3b82f6;
 }
 
 .gallery{
@@ -80,21 +112,31 @@ gap:20px;
 
 .gallery img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
+transition:0.3s;
 }
 
-.project{
-background:#020617;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.skills{
+text-align:center;
+}
+
+.skill{
+display:inline-block;
+background:#1e293b;
+padding:10px 18px;
+margin:10px;
+border-radius:8px;
 }
 
 footer{
 text-align:center;
 padding:30px;
-background:#020617;
 color:#94a3b8;
+border-top:1px solid #1e293b;
 }
 
 </style>
@@ -106,41 +148,39 @@ color:#94a3b8;
 <header>
 
 <h1>Anany Sharma</h1>
-<p>Game Developer • Unreal Engine • Unity • AR/VR</p>
-
-</header>
+<p>Game Developer • Unreal Engine • AR/VR</p>
 
 <nav>
 
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
-<a href="#art">ArtStation</a>
+<a href="#gallery">Art</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
 
 </nav>
 
-<section class="hero">
+</header>
+
+<div class="hero">
 
 <h1>Game Developer & Environment Designer</h1>
 
-<p>
-Creating immersive worlds using Unreal Engine, Unity and interactive storytelling
-</p>
+<p>Creating immersive worlds using Unreal Engine and Unity</p>
 
-<a class="btn" href="https://www.artstation.com/bhamiya">View Art Portfolio</a>
+<a class="btn" href="https://www.artstation.com/bhamiya">View ArtStation</a>
 
-</section>
+</div>
 
 <section id="about">
 
 <h2>About Me</h2>
 
-<p>
+<p style="text-align:center;max-width:700px;margin:auto;color:#94a3b8">
 
-Passionate game developer and level designer specializing in Unreal Engine and immersive environments. I design interactive worlds, gameplay systems, and atmospheric storytelling experiences.
-
-Currently pursuing a Master's in Game Design & Development while building original game projects and teaching game development fundamentals.
+Passionate game developer specializing in Unreal Engine and immersive environments.
+Currently pursuing a Master's in Game Design & Development while creating original
+game projects and exploring interactive storytelling.
 
 </p>
 
@@ -150,61 +190,37 @@ Currently pursuing a Master's in Game Design & Development while building origin
 
 <h2>Projects</h2>
 
-<div class="project">
+<div class="projects">
 
+<div class="card">
 <h3>Knock Knock</h3>
-
-<p>
-
-A psychological horror game inspired by Indian mythology using Unreal Engine.
-
-</p>
-
+<p>Psychological horror game inspired by Indian mythology built using Unreal Engine.</p>
 </div>
 
-<div class="project">
-
+<div class="card">
 <h3>Zombie Land</h3>
-
-<p>
-
-Open-world zombie survival game focusing on exploration and combat mechanics.
-
-</p>
-
+<p>Open-world zombie survival game featuring exploration and combat mechanics.</p>
 </div>
 
-<div class="project">
-
+<div class="card">
 <h3>What's Up There</h3>
-
-<p>
-
-Game published on Epic Games Store where I handled full lifecycle from concept to deployment.
-
-</p>
+<p>Game published on Epic Games Store with full development lifecycle.</p>
+</div>
 
 </div>
 
 </section>
 
-<section id="art">
+<section id="gallery">
 
-<h2>ArtStation Gallery</h2>
+<h2>Art Gallery</h2>
 
 <div class="gallery">
 
-<a href="https://www.artstation.com/bhamiya">
 <img src="https://cdna.artstation.com/p/assets/images/images/000/000/placeholder.jpg">
-</a>
-
-<a href="https://www.artstation.com/bhamiya">
 <img src="https://cdna.artstation.com/p/assets/images/images/000/000/placeholder.jpg">
-</a>
-
-<a href="https://www.artstation.com/bhamiya">
 <img src="https://cdna.artstation.com/p/assets/images/images/000/000/placeholder.jpg">
-</a>
+<img src="https://cdna.artstation.com/p/assets/images/images/000/000/placeholder.jpg">
 
 </div>
 
@@ -216,14 +232,14 @@ Game published on Epic Games Store where I handled full lifecycle from concept t
 
 <div class="skills">
 
-<span>Unreal Engine</span>
-<span>Unity</span>
-<span>C#</span>
-<span>Level Design</span>
-<span>Environment Art</span>
-<span>Maya</span>
-<span>Zbrush</span>
-<span>Photoshop</span>
+<span class="skill">Unreal Engine</span>
+<span class="skill">Unity</span>
+<span class="skill">C#</span>
+<span class="skill">Level Design</span>
+<span class="skill">Environment Art</span>
+<span class="skill">Maya</span>
+<span class="skill">ZBrush</span>
+<span class="skill">Photoshop</span>
 
 </div>
 
@@ -233,15 +249,12 @@ Game published on Epic Games Store where I handled full lifecycle from concept t
 
 <h2>Contact</h2>
 
-<p>Email: ananaysh21@gmail.com</p>
+<p style="text-align:center;color:#94a3b8">
 
-<p>Phone: +91 6376548688</p>
+Email: ananaysh21@gmail.com<br>
+Phone: +91 6376548688<br>
+ArtStation: https://www.artstation.com/bhamiya
 
-<p>
-ArtStation:
-<a href="https://www.artstation.com/bhamiya">
-artstation.com/bhamiya
-</a>
 </p>
 
 </section>
@@ -253,5 +266,4 @@ artstation.com/bhamiya
 </footer>
 
 </body>
-
 </html>
